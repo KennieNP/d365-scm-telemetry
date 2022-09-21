@@ -25,3 +25,6 @@ customEvents
 , eventStatus = customDimensions.eventStatus
 , mobileDeviceId = customDimensions.mobileDeviceId
 , mobileDeviceRequestActivityId = customDimensions.mobileDeviceRequestActivityId
+, clientCity = client_City
+, clientStateOrProvince = client_StateOrProvince
+, clientCountryOrRegion = client_CountryOrRegion
