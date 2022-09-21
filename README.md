@@ -1,5 +1,5 @@
 # What is telemetry?
-Microsoft Power and Dynamics 365 products continuously emits telemetry about events that happen in the customer environment.
+Microsoft Power Platform and Dynamics 365 products continuously emits telemetry about events that happen in the customer environment. 
 
 # What can I use telemetry for?
 Telemetry can be useful for troubleshooting an issue or to determine how often a feature is used.
@@ -8,7 +8,7 @@ Telemetry can be useful for troubleshooting an issue or to determine how often a
 Please visit the [FAQ page](FAQ.md) for any questions on how to get started, pricing, privacy, and more.
 
 # What resources can I find in this repository?
-This repository contains instructions for how you can obtain the telemetry and resources that help you get immediate value from the telemetry
+This repository contains instructions for how you can obtain the telemetry and resources that help you get immediate value from the telemetry from the Dynamics 365 Supply Chain Management product.
 
 | Area of interest | Use it for  | Take me there (use CTRL+click to open in a new tab) |
 | ------ | ------ | ------ |
