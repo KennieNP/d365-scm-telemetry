@@ -17,6 +17,7 @@ To reduce ingestion cost, you can
 * set a daily limit of how much data that can be ingested
 * purge data from your Application Insights resource (see _How do I delete data from Application Insights?_ below)
 * set alerts on cost thresholds being exceeded to get notified if this happens
+* use Data Collection Rules on Azure Log Analytics (the backend of Azure Application Insights)
 
 ## Where can I learn more about Kusto Query Language (KQL) and Azure Data Studio?
 Please visit the [KQL README page](KQL/README.md) for learning resources on KQL and the [Trouble Shooting Guides README page](TroubleShootingGuides/README.md) for learning resources on Azure Data Studio.
