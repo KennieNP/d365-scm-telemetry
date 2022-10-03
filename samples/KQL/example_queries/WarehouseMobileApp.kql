@@ -12,6 +12,9 @@ customEvents
 , PowerSource = customDimensions.PowerSource
 , RenderingDurationInMilliseconds = customDimensions.RenderingDurationInMilliseconds
 , RoundTripLatencyDurationInMilliseconds = customDimensions.RoundTripLatencyDurationInMilliseconds
+, clientCity = client_City
+, clientStateOrProvince = client_StateOrProvince
+, clientCountryOrRegion = client_CountryOrRegion
 
 
 // Warehouse.MobileApp.NextPageRequest
