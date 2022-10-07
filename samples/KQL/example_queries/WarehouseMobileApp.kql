@@ -110,7 +110,7 @@ customEvents
 , eventStatus = customDimensions.eventStatus
 , waveId = customDimensions.waveId
 , waveProcessingId = customDimensions.waveProcessingId
-, workCreationLogFailed = customDimensions.workCreationLogFailed
+, workCreationLogFailed = customDimensions.workCreationLogFailed // If == 1, then this indicates a failure
 , workCreationLogMessage = customDimensions.workCreationLogMessage
 , workCreationLogTransactionTime = customDimensions.workCreationLogTransactionTime
 
