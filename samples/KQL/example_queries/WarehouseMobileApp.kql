@@ -88,17 +88,17 @@ customEvents
 // Warehouse.MobileApp.ClientRoundTrip
 customEvents 
 | where timestamp >= ago(1d) // adjust as needed
-| where customDimensions.EventId == 'WHS000006'
+| where customDimensions.eventId == 'WHS000006'
 | project timestamp
-, BackendProcessingTime = customDimensions.BackendProcessingTime
-, BatteryLevel = customDimensions.BatteryLevel
-, BatterySession = customDimensions.BatterySession
-, BatteryState = customDimensions.BatteryState
-, DeviceId = customDimensions.DeviceId
-, IsEnergySaverTurnedOn = customDimensions.IsEnergySaverTurnedOn
-, PowerSource = customDimensions.PowerSource
-, RenderingDurationInMilliseconds = customDimensions.RenderingDurationInMilliseconds
-, RoundTripLatencyDurationInMilliseconds = customDimensions.RoundTripLatencyDurationInMilliseconds
+, backendProcessingTime = customDimensions.backendProcessingTime
+, batteryLevel = customDimensions.batteryLevel
+, batterySession = customDimensions.batterySession
+, batteryState = customDimensions.batteryState
+, deviceId = customDimensions.deviceId
+, isEnergySaverTurnedOn = customDimensions.isEnergySaverTurnedOn
+, powerSource = customDimensions.powerSource
+, renderingDurationInMilliseconds = customDimensions.renderingDurationInMilliseconds
+, roundTripLatencyDurationInMilliseconds = customDimensions.roundTripLatencyDurationInMilliseconds
 , clientCity = client_City
 , clientStateOrProvince = client_StateOrProvince
 , clientCountryOrRegion = client_CountryOrRegion
