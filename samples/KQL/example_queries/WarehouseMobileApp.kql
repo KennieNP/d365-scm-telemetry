@@ -63,9 +63,39 @@ customEvents
 , activityId = customDimensions.activityId
 , aadTenantId = customDimensions.aadTenantId
 , environmentId = customDimensions.environmentId
-, eventStatus = customDimensions.eventStatus
+, eventStatus = customDimensions.eventStatus // this can be "start" or "stop"
 , mobileDeviceRequestImageDetails = customDimensions.mobileDeviceRequestImageDetails
 , mobileDeviceRequestImageIsThumbnail = customDimensions.mobileDeviceRequestImageIsThumbnail
+
+// Warehouse.MobileApp.ImageRequest durations
+let _lookback = 7d; // adjust as needed
+let image_starts = 
+customEvents 
+| where timestamp >= ago(_lookback) 
+| where customDimensions.eventId == 'WHS000004'
+| where customDimensions.eventStatus == 'start'
+| project timestamp_start = timestamp
+, activityId = tostring(customDimensions.activityId)
+, aadTenantId = customDimensions.aadTenantId
+, environmentId = customDimensions.environmentId
+, mobileDeviceRequestImageDetails = customDimensions.mobileDeviceRequestImageDetails
+, mobileDeviceRequestImageIsThumbnail = customDimensions.mobileDeviceRequestImageIsThumbnail
+;
+let image_ends = 
+customEvents 
+| where timestamp >= ago(_lookback)
+| where customDimensions.eventId == 'WHS000004'
+| where customDimensions.eventStatus == 'stop'
+| project timestamp_end = timestamp
+, activityId = tostring(customDimensions.activityId)
+;
+image_starts
+| join kind=leftouter image_ends on $left.activityId == $right.activityId
+| extend duration_ms = datetime_diff('millisecond', timestamp_end, timestamp_start)
+| project-rename timestamp = timestamp_start
+| project-away activityId1, timestamp_end
+
+
 
 
 // Warehouse.WorkCreation.Log
