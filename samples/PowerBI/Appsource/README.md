@@ -7,7 +7,7 @@ Go to the PBI admin portal.
 Under Tenant settings, Go to Template App settings. Here you can enable template apps that are not listed on app source.
 Remember to set the setting back after installing the beta version of the app.
 
-![Prereq](../../../images/power-bi-prereq.png)
+![Prereq](../../images/power-bi-prereq.png)
 
 # Getting the report
 Use this link to install/update the current development version template app (if you want to test bleeding edge): https://aka.ms/scm-app-beta 
